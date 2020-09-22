@@ -1,19 +1,22 @@
 # PensionContent
 
+## How to run
 
+1. Install python3, pip3 and virtualenv
+2. Create virtual env using the following command
+   `virtualenv -p /usr/bin/python3 venv`
+3. Activate virtualenv
+   `source venv/bin/activate`
+4. Install requirements
+   `pip install -r requirements.txt`
+5. Run script
+   `./main.py`
 
-## Python activate code
+## Assumptions
 
-To make it easier to setup a virtual env, add:
-```bash
-function setup_virtual_env {
-    echo "setting up the virtual env"
-    virtualenv -p /usr/bin/python3 venv
-    source venv/bin/activate
-    if [ -f requirements.txt ] ; then
-      echo "installing requirements"
-      pip install -r requirements.txt
-    fi
-}
-alias activate="setup_virtual_env"
-```
+1. Data is found in data/sample-funds.json and is formatted as specified
+2. The first record is the overall funds you own
+
+## Time taken
+
+Approx 4 hours
