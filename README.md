@@ -16,3 +16,7 @@
 
 1. Data is found in data/sample-funds.json and is formatted as specified
 2. The first record is the overall funds you own
+
+## Time taken
+
+Approx 4 hours
