@@ -48,7 +48,16 @@ def process_data(holdingList, fundList):
     else:
         return newHoldingList
 
+def format_data(finalList):
+    fundNameToCheck = 'GoldenGadgets'
+    print("Global Ethical Fund pension stocks held:")
+    for item in finalList:
+        print("\t{!s} =\t{:.2f}".format(item, finalList[item]))
+    print("Does the pension contain GoldenGadgets?")
+    if fundNameToCheck in finalList:
+        print("\tYes it does, and represents = {!s}% of the pension".format(finalList[fundNameToCheck]*100))
+
 if __name__ == '__main__':
     holdingList, fundList = load_data()
     finalList = process_data(holdingList, fundList)
-    print("finalList = {!s}".format(finalList))
+    format_data(finalList)
